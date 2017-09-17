@@ -20,7 +20,8 @@
  !
  ! CDDL HEADER END
  !
- !      Copyright 2011 ForgeRock AS
+ !      Copyright 2011 ForgeRock AS.
+ !      Portions Copyright 2017 Wren Security.
  !    
  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -32,7 +33,7 @@
   </parent>
   <artifactId>i18n-maven-plugin</artifactId>
   <packaging>maven-plugin</packaging>
-  <name>ForgeRock I18N Maven Plugin</name>
+  <name>Wren Security I18N Maven Plugin</name>
   <description>A Maven plugin which generates I18N messages from property files</description>
   <dependencies>
     <dependency>
@@ -55,4 +56,55 @@
       </plugin>
     </plugins>
   </reporting>
+  <!-- may be temporary -->
+  <!-- FIXME: This is a workaround for non-standard Javadoc tags that FR is using to indicate
+       information about Maven-related properties in the Mojos. -->
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <configuration>
+          <tags>
+            <tag>
+              <name>Checkstyle</name>
+              <!-- The value X makes javadoc ignoring the tag -->
+              <placement>X</placement>
+            </tag>
+            <tag>
+              <name>goal</name>
+              <!-- The value X makes javadoc ignoring the tag -->
+              <placement>X</placement>
+            </tag>
+            <tag>
+              <name>parameter</name>
+              <!-- The value X makes javadoc ignoring the tag -->
+              <placement>X</placement>
+            </tag>
+            <tag>
+              <name>phase</name>
+              <!-- The value X makes javadoc ignoring the tag -->
+              <placement>X</placement>
+            </tag>
+            <tag>
+              <name>readonly</name>
+              <!-- The value X makes javadoc ignoring the tag -->
+              <placement>X</placement>
+            </tag>
+            <tag>
+              <name>required</name>
+              <!-- The value X makes javadoc ignoring the tag -->
+              <placement>X</placement>
+            </tag>
+            <tag>
+              <name>threadSafe</name>
+              <!-- The value X makes javadoc ignoring the tag -->
+              <placement>X</placement>
+            </tag>
+          </tags>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+  <!-- /may be temporary -->
 </project>

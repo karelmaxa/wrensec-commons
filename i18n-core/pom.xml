@@ -20,7 +20,8 @@
  !
  ! CDDL HEADER END
  !
- !      Copyright 2011 ForgeRock AS
+ !      Copyright 2011 ForgeRock AS.
+ !      Portions Copyright 2017 Wren Security.
  !    
  -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -31,7 +32,7 @@
     <version>1.4.2</version>
   </parent>
   <artifactId>i18n-core</artifactId>
-  <name>ForgeRock I18N Core</name>
+  <name>Wren Security I18N Core</name>
   <description>
     This module provides core Java APIs for embedding and using
     localizable messages in applications.
@@ -72,17 +73,6 @@
             <Export-Package>org.forgerock.i18n.*</Export-Package>
           </instructions>
         </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-source-plugin</artifactId>
-        <executions>
-          <execution>
-            <goals>
-              <goal>jar</goal>
-            </goals>
-          </execution>
-        </executions>
       </plugin>
     </plugins>
   </build>
