@@ -11,7 +11,8 @@
  * Header, with the fields enclosed by brackets [] replaced by your own identifying
  * information: "Portions Copyrighted [year] [name of copyright owner]".
  *
- *      Copyright 2011-2013 ForgeRock AS
+ *      Copyright 2011-2013 ForgeRock AS.
+ *      Portions Copyright 2017 Wren Security.
  */
 package org.forgerock.i18n.maven;
 
@@ -334,6 +335,7 @@ abstract class AbstractGenerateMessagesMojo extends AbstractMojo {
         String getComment() {
             final StringBuilder sb = new StringBuilder();
             sb.append(indent(1)).append("/**").append(EOL);
+            sb.append(indent(1)).append(" * ").append("{@code").append(EOL);
 
             // Unwrapped so that you can search through the descriptor
             // file for a message and not have to worry about line breaks
@@ -343,6 +345,8 @@ abstract class AbstractGenerateMessagesMojo extends AbstractMojo {
             for (final String s : sa) {
                 sb.append(indent(1)).append(" * ").append(s).append(EOL);
             }
+
+            sb.append(indent(1)).append(" * ").append("}").append(EOL);
             sb.append(indent(1)).append(" */").append(EOL);
             return sb.toString();
         }
