@@ -34,8 +34,6 @@
     </description>
 
     <properties>
-        <commons.forgerock-bom.version>7.0</commons.forgerock-bom.version>
-
         <supercsv.version>2.4.0</supercsv.version>
         <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
         <javax.inject.version>1_3</javax.inject.version>
