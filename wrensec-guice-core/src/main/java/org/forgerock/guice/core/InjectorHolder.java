@@ -12,6 +12,7 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2013-2015 ForgeRock AS.
+ * Portions Copyright 2021 Wren Security.
  */
 
 package org.forgerock.guice.core;
@@ -50,8 +51,11 @@ public enum InjectorHolder {
      * Constructs an instance of the InjectorHolder and initialises the Guice Injector.
      */
     private InjectorHolder() {
-        InjectorFactory injectorFactory = new InjectorFactory(new GuiceModuleCreator(),
-                new GuiceInjectorCreator(), InjectorConfiguration.getGuiceModuleLoader());
+        InjectorFactory injectorFactory = new InjectorFactory(
+                new GuiceModuleCreator(),
+                new GuiceInjectorCreator(),
+                InjectorConfiguration.getGuiceModuleLoader(),
+                new GuiceModuleFilter());
 
         try {
             injector = injectorFactory.createInjector(InjectorConfiguration.getModuleAnnotation());

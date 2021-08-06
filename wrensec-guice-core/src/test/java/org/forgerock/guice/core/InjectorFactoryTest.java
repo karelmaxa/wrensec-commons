@@ -12,6 +12,7 @@
 * information: "Portions copyright [year] [name of copyright owner]".
 *
 * Copyright 2013-2015 ForgeRock AS.
+* Portions Copyright 2021 Wren Security.
 */
 
 package org.forgerock.guice.core;
@@ -21,6 +22,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
 import java.util.HashSet;
@@ -28,6 +30,7 @@ import java.util.Set;
 
 import org.forgerock.guice.core.test.TestModule1;
 import org.forgerock.guice.core.test.TestModule2;
+import org.mockito.AdditionalAnswers;
 import org.mockito.ArgumentCaptor;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -41,14 +44,19 @@ public class InjectorFactoryTest {
     private GuiceModuleCreator moduleCreator;
     private GuiceInjectorCreator injectorCreator;
     private GuiceModuleLoader moduleLoader;
+    private GuiceModuleFilter moduleFilter;
 
     @BeforeClass
     public void setUp() {
         moduleCreator = mock(GuiceModuleCreator.class);
         injectorCreator = mock(GuiceInjectorCreator.class);
         moduleLoader = mock(GuiceModuleLoader.class);
+        moduleFilter = mock(GuiceModuleFilter.class);
 
-        injectorFactory = new InjectorFactory(moduleCreator, injectorCreator, moduleLoader);
+        when(moduleFilter.filter(any())).then(AdditionalAnswers.returnsFirstArg());
+
+        injectorFactory = new InjectorFactory(moduleCreator, injectorCreator,
+                moduleLoader, moduleFilter);
     }
 
     @Test

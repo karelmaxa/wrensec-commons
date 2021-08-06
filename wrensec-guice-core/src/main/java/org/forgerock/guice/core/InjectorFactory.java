@@ -12,6 +12,7 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2013-2015 ForgeRock AS.
+ * Portions Copyright 2021 Wren Security.
  */
 
 package org.forgerock.guice.core;
@@ -39,6 +40,7 @@ final class InjectorFactory {
     private final GuiceModuleCreator moduleCreator;
     private final GuiceInjectorCreator injectorCreator;
     private final GuiceModuleLoader moduleLoader;
+    private final GuiceModuleFilter moduleFilter;
 
     /**
      * Constructs an instance of the InjectorFactory.
@@ -47,11 +49,15 @@ final class InjectorFactory {
      * @param injectorCreator An instance of the GuiceInjectorCreator.
      * @param moduleLoader An instance of the GuiceModuleLoader.
      */
-    InjectorFactory(GuiceModuleCreator moduleCreator, GuiceInjectorCreator injectorCreator,
-            GuiceModuleLoader moduleLoader) {
+    InjectorFactory(
+            GuiceModuleCreator moduleCreator,
+            GuiceInjectorCreator injectorCreator,
+            GuiceModuleLoader moduleLoader,
+            GuiceModuleFilter moduleFilter) {
         this.moduleCreator = moduleCreator;
         this.injectorCreator = injectorCreator;
         this.moduleLoader = moduleLoader;
+        this.moduleFilter = moduleFilter;
     }
 
     /**
@@ -76,19 +82,19 @@ final class InjectorFactory {
      * where all the modules MUST be annotated the given module annotation.
      *
      * @param moduleAnnotation The module annotation.
-     * @return A Set of Guice modules.
+     * @return A collection of Guice modules.
      */
-    @SuppressWarnings("unchecked")
-    private Set<Module> createModules(Class<? extends Annotation> moduleAnnotation) {
+    private Iterable<Module> createModules(Class<? extends Annotation> moduleAnnotation) {
 
         Set<Class<? extends Module>> moduleClasses = moduleLoader.getGuiceModules(moduleAnnotation);
 
-        Set<Module> modules = new HashSet<Module>();
+        Set<Module> modules = new HashSet<>();
 
         for (Class<? extends Module> moduleClass : moduleClasses) {
             modules.add(moduleCreator.createInstance(moduleClass));
         }
 
-        return modules;
+        return moduleFilter.filter(modules);
     }
+
 }
