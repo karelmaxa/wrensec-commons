@@ -27,7 +27,7 @@
 
     <groupId>org.forgerock.commons</groupId>
     <artifactId>commons-bom</artifactId>
-    <version>22.1.0</version>
+    <version>22.1.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Wren Security Common Bill Of Materials</name>
@@ -712,6 +712,9 @@
     </dependencyManagement>
 
   <scm>
-    <tag>22.1.0</tag>
+    <tag>HEAD</tag>
+    <connection>scm:git:git://github.com/WrenSecurity/wrensec-commons.git</connection>
+    <developerConnection>scm:git:git@github.com:WrenSecurity/wrensec-commons.git</developerConnection>
+    <url>https://github.com/WrenSecurity/wrensec-commons</url>
   </scm>
 </project>
