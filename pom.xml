@@ -22,7 +22,7 @@
      <groupId>org.forgerock.commons</groupId>
      <artifactId>commons-bom</artifactId>
      <relativePath>commons-bom/pom.xml</relativePath>
-     <version>22.1.1</version>
+     <version>22.1.2-SNAPSHOT</version>
   </parent>
 
   <artifactId>commons-parent</artifactId>
