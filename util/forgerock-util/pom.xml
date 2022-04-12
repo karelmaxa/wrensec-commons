@@ -67,6 +67,13 @@
             <artifactId>slf4j-simple</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.mozilla</groupId>
+            <artifactId>rhino-engine</artifactId>
+            <version>1.7.14</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
