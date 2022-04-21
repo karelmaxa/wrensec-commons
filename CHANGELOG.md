@@ -3,6 +3,7 @@
 ### Major
 
 * Switched to Wren group and artifact ids
+* Added support for module overrides via `GuiceOverride` annotation
 
 
 # 2.0.0

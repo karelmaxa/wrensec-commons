@@ -36,6 +36,7 @@ public final class GuiceInitialisationFilter implements ServletContextListener {
      *
      * @param servletContextEvent {@inheritDoc}
      */
+    @Override
     public void contextInitialized(ServletContextEvent servletContextEvent) {
         ServletContext servletContext = servletContextEvent.getServletContext();
         String stageName = servletContext.getInitParameter(Stage.class.getCanonicalName());
@@ -50,6 +51,7 @@ public final class GuiceInitialisationFilter implements ServletContextListener {
      *
      * @param servletContextEvent {@inheritDoc}
      */
+    @Override
     public void contextDestroyed(ServletContextEvent servletContextEvent) {
     }
 }
