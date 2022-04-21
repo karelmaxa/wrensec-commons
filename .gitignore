@@ -1,3 +1,12 @@
+# IDEA
 .idea
 *.iml
+
+# Eclipse
+.project
+.classpath
+.settings
+
+# Maven
 target
+test-output
