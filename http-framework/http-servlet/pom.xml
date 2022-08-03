@@ -60,17 +60,11 @@
     </dependency>
 
     <dependency>
-      <groupId>org.forgerock.commons</groupId>
-      <artifactId>forgerock-guice-core</artifactId>
-      <version>2.0.0</version>
+      <groupId>org.wrensecurity.commons</groupId>
+      <artifactId>wrensec-guice-core</artifactId>
+      <version>${project.version}</version>
       <scope>provided</scope>
       <optional>true</optional>
-      <exclusions>
-        <exclusion>
-          <groupId>org.mockito</groupId>
-          <artifactId>mockito-all</artifactId>
-        </exclusion>
-      </exclusions>
     </dependency>
 
     <dependency>
