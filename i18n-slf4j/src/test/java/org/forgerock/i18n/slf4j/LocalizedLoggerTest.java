@@ -16,7 +16,7 @@
 
 package org.forgerock.i18n.slf4j;
 
-import static org.fest.assertions.Assertions.*;
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.forgerock.i18n.slf4j.MyTestMessages.*;
 import static org.mockito.Mockito.*;
 
