@@ -32,7 +32,7 @@
     <name>Wren Security I18N Framework</name>
 
     <description>
-        A fork of ForgeRock's common framework for embedding localizable messages in applications.
+        Common framework for embedding localizable messages in applications.
     </description>
 
     <scm>
