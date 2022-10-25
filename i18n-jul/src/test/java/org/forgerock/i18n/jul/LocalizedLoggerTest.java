@@ -19,7 +19,7 @@ package org.forgerock.i18n.jul;
 import static org.forgerock.i18n.jul.MyTestMessages.MESSAGE_WITH_NO_ARGS;
 import static org.forgerock.i18n.jul.MyTestMessages.MESSAGE_WITH_STRING;
 import static org.forgerock.i18n.jul.MyTestMessages.MESSAGE_WITH_STRING_AND_NUMBER;
-import static org.mockito.Matchers.anyString;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
