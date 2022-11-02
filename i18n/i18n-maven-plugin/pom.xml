@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+   The contents of this file are subject to the terms of the Common Development and
+   Distribution License (the License). You may not use this file except in compliance with the
+   License.
+
+   You can obtain a copy of the License at legal/CDDLv1.0.txt. See the License for the
+   specific language governing permission and limitations under the License.
+
+   When distributing Covered Software, include this CDDL Header Notice in each file and include
+   the License file at legal/CDDLv1.0.txt. If applicable, add the following below the CDDL
+   Header, with the fields enclosed by brackets [] replaced by your own identifying
+   information: "Portions copyright [year] [name of copyright owner]".
+
+   Copyright 2011 ForgeRock AS.
+   Portions Copyright 2017-2022 Wren Security.
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.wrensecurity.commons</groupId>
+        <artifactId>i18n-framework</artifactId>
+        <version>22.3.0-SNAPSHOT</version>
+        <relativePath>../</relativePath>
+    </parent>
+
+    <artifactId>i18n-maven-plugin</artifactId>
+    <packaging>maven-plugin</packaging>
+
+    <name>Wren Security I18N Maven Plugin</name>
+
+    <description>A Maven plugin which generates I18N messages from property files</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>3.8.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-core</artifactId>
+            <version>3.8.6</version>
+        </dependency>
+    </dependencies>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-plugin-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <tags>
+                        <tag>
+                            <name>Checkstyle\\:ignoreFor</name>
+                            <placement>X</placement>
+                        </tag>
+                        <tag>
+                            <name>Checkstyle\\:ignore</name>
+                            <placement>X</placement>
+                        </tag>
+                        <tag>
+                            <name>goal</name>
+                            <placement>X</placement>
+                        </tag>
+                        <tag>
+                            <name>parameter</name>
+                            <placement>X</placement>
+                        </tag>
+                        <tag>
+                            <name>phase</name>
+                            <placement>X</placement>
+                        </tag>
+                        <tag>
+                            <name>readonly</name>
+                            <placement>X</placement>
+                        </tag>
+                        <tag>
+                            <name>required</name>
+                            <placement>X</placement>
+                        </tag>
+                        <tag>
+                            <name>threadSafe</name>
+                            <placement>X</placement>
+                        </tag>
+                    </tags>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>
