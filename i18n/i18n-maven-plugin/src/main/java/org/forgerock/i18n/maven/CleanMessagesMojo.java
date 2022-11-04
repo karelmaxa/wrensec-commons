@@ -11,7 +11,8 @@
  * Header, with the fields enclosed by brackets [] replaced by your own identifying
  * information: "Portions Copyrighted [year] [name of copyright owner]".
  *
- *      Copyright 2011 ForgeRock AS
+ * Copyright 2011 ForgeRock AS
+ * Portions Copyright 2022 Wren Security.
  */
 package org.forgerock.i18n.maven;
 
@@ -36,14 +37,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
 
 /**
  * Goal which cleans unused messages files from a property file.
- *
- * @Checkstyle:ignore
- * @goal clean-messages
- * @threadSafe
  */
+@Mojo(name="clean-messages", threadSafe=true)
 @SuppressWarnings("resource")
 public final class CleanMessagesMojo extends AbstractMojo {
 
@@ -106,26 +106,20 @@ public final class CleanMessagesMojo extends AbstractMojo {
 
     /**
      * The target directory in which the source files should be generated.
-     *
-     * @parameter default-value="${project.build.sourceDirectory}"
-     * @required
      */
+    @Parameter(defaultValue="${project.build.sourceDirectory}", required=true)
     private File sourceDirectory;
 
     /**
      * The message message file to be cleaned.
-     *
-     * @parameter
-     * @required
      */
+    @Parameter(required=true)
     private File messageFile;
 
     /**
      * The encoding argument used by Java source files.
-     *
-     * @parameter default-value="${project.build.sourceEncoding}"
-     * @required
      */
+    @Parameter(defaultValue="${project.build.sourceEncoding}", required=true)
     private String encoding;
 
     private final Map<MessagePropertyKey, String> unreferencedProperties =

@@ -11,37 +11,33 @@
  * Header, with the fields enclosed by brackets [] replaced by your own identifying
  * information: "Portions Copyrighted [year] [name of copyright owner]".
  *
- *      Copyright 2011 ForgeRock AS
+ * Copyright 2011 ForgeRock AS
+ * Portions Copyright 2022 Wren Security.
  */
 package org.forgerock.i18n.maven;
 
 import java.io.File;
 
+import org.apache.maven.plugins.annotations.LifecyclePhase;
+import org.apache.maven.plugins.annotations.Mojo;
+import org.apache.maven.plugins.annotations.Parameter;
+
 /**
  * Goal which generates message source files from a one or more property files.
- *
- * @Checkstyle:ignoreFor 2
- * @goal generate-messages
- * @phase generate-sources
- * @threadSafe
  */
+@Mojo(name="generate-messages", defaultPhase=LifecyclePhase.GENERATE_SOURCES, threadSafe=true)
 public final class GenerateMessagesMojo extends AbstractGenerateMessagesMojo {
 
     /**
      * The target directory in which the source files should be generated.
-     *
-     * @parameter
-     *            default-value="${project.build.directory}/generated-sources/messages"
-     * @required
      */
+    @Parameter(defaultValue="${project.build.directory}/generated-sources/messages", required=true)
     private File targetDirectory;
 
     /**
      * The resource directory containing the message files.
-     *
-     * @parameter default-value="${basedir}/src/main/resources"
-     * @required
      */
+    @Parameter(defaultValue="${basedir}/src/main/resources", required=true)
     private File resourceDirectory;
 
     /**
