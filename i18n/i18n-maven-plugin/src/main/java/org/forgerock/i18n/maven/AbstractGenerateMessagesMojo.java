@@ -37,6 +37,7 @@ import java.util.regex.Pattern;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.apache.maven.plugins.annotations.Parameter;
 import org.apache.maven.project.MavenProject;
 
 /**
@@ -489,28 +490,21 @@ abstract class AbstractGenerateMessagesMojo extends AbstractMojo {
     /**
      * Indicates whether or not message files should be regenerated even if they
      * are already up to date.
-     *
-     * @parameter default-value="false"
-     * @required
      */
+    @Parameter(defaultValue="false", required=true)
     private boolean force;
 
     /**
      * The list of files we want to transfer, relative to the resource
      * directory.
-     *
-     * @parameter
-     * @required
      */
+    @Parameter(required=true)
     private String[] messageFiles;
 
     /**
      * The current Maven project.
-     *
-     * @parameter default-value="${project}"
-     * @readonly
-     * @required
      */
+    @Parameter(defaultValue="${project}", readonly=true, required=true)
     private MavenProject project;
 
     /**

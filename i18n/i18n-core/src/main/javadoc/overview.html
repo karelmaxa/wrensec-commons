@@ -40,28 +40,28 @@
     Once you have your property files defined you can use the
     <b>i18n-maven-plugin</b> to generate the messages. To do this, add the
     following lines to your pom.xml:
-    <pre>  &lt;build>
-    &lt;plugins>
-      &lt;plugin>
-        &lt;groupId>org.wrensecurity.commons&lt;/groupId>
-        &lt;artifactId>i18n-maven-plugin&lt;/artifactId>
-        &lt;version>${project.version}&lt;/version>
-        &lt;executions>
-          &lt;execution>
-            &lt;phase>generate-sources&lt;/phase>
-            &lt;goals>
-              &lt;goal>generate-messages&lt;/goal>
-            &lt;/goals>
-            &lt;configuration>
-              &lt;messageFiles>
-                &lt;messageFile>com/example/myapp/core.properties&lt;/messageFile>
-              &lt;/messageFiles>
-            &lt;/configuration>
-          &lt;/execution>
-        &lt;/executions>
-      &lt;/plugin>
-    &lt;/plugins>
-  &lt;/build>
+    <pre>  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.wrensecurity.commons&lt;/groupId&gt;
+        &lt;artifactId&gt;i18n-maven-plugin&lt;/artifactId&gt;
+        &lt;version&gt;${project.version}&lt;/version&gt;
+        &lt;executions&gt;
+          &lt;execution&gt;
+            &lt;phase&gt;generate-sources&lt;/phase&gt;
+            &lt;goals&gt;
+              &lt;goal&gt;generate-messages&lt;/goal&gt;
+            &lt;/goals&gt;
+            &lt;configuration&gt;
+              &lt;messageFiles&gt;
+                &lt;messageFile&gt;com/example/myapp/core.properties&lt;/messageFile&gt;
+              &lt;/messageFiles&gt;
+            &lt;/configuration&gt;
+          &lt;/execution&gt;
+        &lt;/executions&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
     </pre>
     This will generate a Java file in
     <b>target/generated-sources/messages/com/example/myapp/CoreMessages.java</b>
@@ -79,23 +79,23 @@
     /**
     * Arg1=%s
     */
-    public static final LocalizableMessageDescriptor.Arg1&lt;CharSequence> MESSAGE_WITH_STRING =
-            new LocalizableMessageDescriptor.Arg1&lt;CharSequence>(CoreMessages.class,RESOURCE,"MESSAGE_WITH_STRING",-1);
+    public static final LocalizableMessageDescriptor.Arg1&lt;CharSequence&gt; MESSAGE_WITH_STRING =
+            new LocalizableMessageDescriptor.Arg1&lt;CharSequence&gt;(CoreMessages.class,RESOURCE,"MESSAGE_WITH_STRING",-1);
 
     /**
     * Arg1=%s Arg2=%d
     */
-    public static final LocalizableMessageDescriptor.Arg2&lt;CharSequence,Number> MESSAGE_WITH_STRING_AND_NUMBER =
-            new LocalizableMessageDescriptor.Arg2&lt;CharSequence,Number>(CoreMessages.class,RESOURCE,"MESSAGE_WITH_STRING_AND_NUMBER",-1);
+    public static final LocalizableMessageDescriptor.Arg2&lt;CharSequence,Number&gt; MESSAGE_WITH_STRING_AND_NUMBER =
+            new LocalizableMessageDescriptor.Arg2&lt;CharSequence,Number&gt;(CoreMessages.class,RESOURCE,"MESSAGE_WITH_STRING_AND_NUMBER",-1);
 
   }
     </pre>
     To use the generated messages you'll need the following dependency:
     <pre>
-  &lt;groupId>org.wrensecurity.commons&lt;/groupId>
-  &lt;artifactId>i18n-core&lt;/artifactId>
-  &lt;version>${project.version}&lt;/version>
-  &lt;scope>compile&lt;/scope>
+  &lt;groupId&gt;org.wrensecurity.commons&lt;/groupId&gt;
+  &lt;artifactId&gt;i18n-core&lt;/artifactId&gt;
+  &lt;version&gt;${project.version}&lt;/version&gt;
+  &lt;scope&gt;compile&lt;/scope&gt;
     </pre>
     Messages can then be instantiated in a type safe manner which is enforced at
     compile time (unlike CAL10N) as well as avoiding runtime errors due to
