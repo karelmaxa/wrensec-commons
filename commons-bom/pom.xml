@@ -45,7 +45,7 @@
         <!-- Third party components versions -->
         <jodaTime.version>2.10.9</jodaTime.version>
         <assertj.version>3.19.0</assertj.version>
-        <forgerock-guava.version>18.0.4</forgerock-guava.version>
+        <wrensec-guava.version>18.0.5</wrensec-guava.version>
         <jaxb-osgi.version>2.3.3</jaxb-osgi.version>
         <activation.version>2.0.0</activation.version>
         <jackson.version>2.12.1</jackson.version>
@@ -308,101 +308,101 @@
                 <version>${jsr305.version}</version>
             </dependency>
 
-            <!-- ForgeRock Guava dependency -->
+            <!-- Wren Security Guava dependency -->
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-all</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-all</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-annotations</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-annotations</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-base</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-base</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-cache</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-cache</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-collect</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-collect</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-concurrent</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-concurrent</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-escape</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-escape</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-eventbus</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-eventbus</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-hash</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-hash</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-io</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-io</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-math</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-math</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-net</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-net</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-primitives</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-primitives</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-reflect</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-reflect</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.forgerock.commons.guava</groupId>
-                <artifactId>forgerock-guava-xml</artifactId>
-                <version>${forgerock-guava.version}</version>
+                <groupId>org.wrensecurity.commons.guava</groupId>
+                <artifactId>wrensec-guava-xml</artifactId>
+                <version>${wrensec-guava.version}</version>
             </dependency>
 
             <!-- ForgeRock Util dependencies -->
