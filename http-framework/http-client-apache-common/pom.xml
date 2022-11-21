@@ -27,6 +27,11 @@
   <artifactId>chf-client-apache-common</artifactId>
   <name>Wren Security Commons HTTP - Apache HttpClient(s) base</name>
 
+  <properties>
+    <apache-httpclient.version>4.5.13</apache-httpclient.version>
+    <apache-httpcore.version>4.4.14</apache-httpcore.version>
+  </properties>
+
   <build>
     <plugins>
       <plugin>

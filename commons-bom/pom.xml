@@ -21,7 +21,7 @@
     <parent>
         <groupId>org.wrensecurity</groupId>
         <artifactId>wrensec-parent</artifactId>
-        <version>3.3.0</version>
+        <version>3.5.0</version>
         <relativePath />
     </parent>
 
@@ -34,15 +34,9 @@
     <description>
         Provides a list of common dependencies which are known to be compatible with each other.
     </description>
-    <url>https://www.wrensecurity.org</url>
+    <url>https://wrensecurity.org</url>
 
     <properties>
-        <pgpWhitelistArtifact>org.wrensecurity:wrensec-pgp-whitelist:1.5.6</pgpWhitelistArtifact>
-
-        <!-- Parent plugin version overrides -->
-        <mavenReleasePluginVersion>3.0.0-M6</mavenReleasePluginVersion>
-
-        <!-- Third party components versions -->
         <jodaTime.version>2.10.9</jodaTime.version>
         <assertj.version>3.19.0</assertj.version>
         <wrensec-guava.version>18.0.5</wrensec-guava.version>
@@ -54,56 +48,8 @@
         <slf4j.version>1.7.30</slf4j.version>
         <testng.version>7.3.0</testng.version>
         <swagger.version>1.6.2</swagger.version>
-        <apache-httpcore.version>4.4.14</apache-httpcore.version>
-        <apache-httpclient.version>4.5.13</apache-httpclient.version>
-        <apache-httpasyncclient.version>4.1.4</apache-httpasyncclient.version>
         <jsr305.version>3.0.2</jsr305.version>
     </properties>
-
-    <repositories>
-        <!-- Needed to retrieve parent POM -->
-        <repository>
-            <id>wrensecurity-releases</id>
-            <name>Wren Security Release Repository</name>
-            <url>https://wrensecurity.jfrog.io/wrensecurity/releases</url>
-
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-
-        <!-- Needed to retrieve parent POM -->
-        <repository>
-            <id>wrensecurity-snapshots</id>
-            <name>Wren Security Snapshot Repository</name>
-            <url>https://wrensecurity.jfrog.io/wrensecurity/snapshots</url>
-
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-
-            <releases>
-                <enabled>false</enabled>
-            </releases>
-        </repository>
-    </repositories>
-
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <!-- TODO: Move into `wrensec-parent` -->
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>clirr-maven-plugin</artifactId>
-                    <version>${clirrPluginVersion}</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
 
     <dependencyManagement>
         <dependencies>

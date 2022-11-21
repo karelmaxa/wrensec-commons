@@ -27,6 +27,10 @@
   <artifactId>chf-client-apache-async</artifactId>
   <name>Wren Security Commons HTTP - Apache Async HttpClient integration</name>
 
+  <properties>
+    <apache-httpasyncclient.version>4.1.4</apache-httpasyncclient.version>
+  </properties>
+
   <build>
     <plugins>
       <plugin>
