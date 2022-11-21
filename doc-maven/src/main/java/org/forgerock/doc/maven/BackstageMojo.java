@@ -24,7 +24,7 @@ import org.apache.maven.plugins.annotations.LifecyclePhase;
 import org.apache.maven.plugins.annotations.Mojo;
 import org.forgerock.doc.maven.backstage.ArtifactDocs;
 import org.forgerock.doc.maven.backstage.Pdf;
-import org.forgerock.json.fluent.JsonValue;
+import org.forgerock.json.JsonValue;
 
 import java.io.File;
 import java.io.IOException;
