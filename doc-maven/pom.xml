@@ -29,5 +29,11 @@
     <modules>
         <module>doc-maven-plugin</module>
         <module>doc-default-branding</module>
+        <module>xcite-maven-plugin</module>
     </modules>
+
+    <properties>
+        <mavenVersion>3.3.1</mavenVersion>
+        <plexusUtilsVersion>3.5.0</plexusUtilsVersion>
+    </properties>
 </project>
