@@ -12,8 +12,8 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2012-2015 ForgeRock AS.
+ * Partial Copyright 2022 Wren Security
  */
-
 package org.forgerock.doc.maven;
 
 import static org.twdata.maven.mojoexecutor.MojoExecutor.element;
@@ -266,7 +266,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * The artifactId of the branding to use.
      */
-    @Parameter(defaultValue = "forgerock-doc-default-branding")
+    @Parameter(defaultValue = "doc-default-branding")
     private String brandingArtifactId;
 
     /**
@@ -274,7 +274,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
      *
      * <br>
      *
-     * Default: {@code forgerock-doc-default-branding}.
+     * Default: {@code doc-default-branding}.
      *
      * @return The branding artifactId.
      */
@@ -285,7 +285,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * The groupId of the branding to use.
      */
-    @Parameter(defaultValue = "org.forgerock.commons")
+    @Parameter(defaultValue = "org.wrensecurity.commons")
     private String brandingGroupId;
 
     /**
@@ -293,7 +293,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
      *
      * <br>
      *
-     * Default: {@code org.forgerock.commons}
+     * Default: {@code org.wrensecurity.common}
      *
      * @return The branding groupId.
      */
@@ -388,7 +388,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * The {@code artifactId} of the common content artifact.
      */
-    @Parameter(defaultValue = "forgerock-doc-common-content")
+    @Parameter(defaultValue = "doc-common-content")
     private String commonContentArtifactId;
 
     /**
@@ -396,7 +396,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
      *
      * <br>
      *
-     * Default: {@code forgerock-doc-common-content}.
+     * Default: {@code doc-common-content}.
      *
      * @return The {@code artifactId} of the common content artifact.
      */
@@ -407,7 +407,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * The {@code groupId} of the common content artifact.
      */
-    @Parameter(defaultValue = "org.forgerock.commons")
+    @Parameter(defaultValue = "org.wrensecurity.commons")
     private String commonContentGroupId;
 
     /**
@@ -415,7 +415,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
      *
      * <br>
      *
-     * Default: {@code org.forgerock.commons}.
+     * Default: {@code org.wrensecurity.common}.
      *
      * @return The {@code groupId} of the common content artifact.
      */
@@ -730,7 +730,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * URL to site for published documentation.
      */
-    @Parameter(defaultValue = "http://docs.forgerock.org/")
+    @Parameter(defaultValue = "https://docs.wrensecurity.org/")
     private String docsSite;
 
     /**
@@ -738,7 +738,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
      *
      * <br>
      *
-     * Default: {@code http://docs.forgerock.org/}
+     * Default: {@code https://docs.wrensecurity.org/}
      *
      * @return The URL to the site for published documentation.
      */
@@ -864,7 +864,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * URL to JSON object showing EOSL versions for each project.
      */
-    @Parameter(defaultValue = "http://docs.forgerock.org/eosl.json")
+    @Parameter(defaultValue = "http://docs.wrensecurity.org/eosl.json")
     private String eoslJson;
 
     /**
@@ -906,7 +906,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * Favicon link element for the pre-site version of the HTML.
      */
-    @Parameter(defaultValue = "<link rel=\"shortcut icon\" href=\"http://forgerock.org/favicon.ico\">")
+    @Parameter(defaultValue = "<link rel=\"shortcut icon\" href=\"https://wrensecurity.org/favicon.ico\">")
     private String faviconLink;
 
     /**
@@ -1075,9 +1075,9 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
      *
      * <br>
      *
-     * The identifier for docs.forgerock.org is {@code UA-23412190-14}.
+     * The identifier for docs.forgerock.org is {@code UA-REMOVED-VALUE}.
      */
-    @Parameter(defaultValue = "UA-23412190-14")
+    @Parameter(defaultValue = "UA-REMOVED-VALUE")
     private String googleAnalyticsId;
 
     /**
@@ -1085,7 +1085,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
      *
      * <br>
      *
-     * Default: {@code UA-23412190-14}
+     * Default: {@code UA-REMOVED-VALUE}
      *
      * @return The Google Analytics identifier.
      */
@@ -1220,7 +1220,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * URL to JSON object showing latest versions for each project.
      */
-    @Parameter(defaultValue = "http://docs.forgerock.org/latest.json")
+    @Parameter(defaultValue = "http://docs.wrensecurity.org/latest.json")
     private String latestJson;
 
     /**
@@ -1609,7 +1609,7 @@ abstract public class AbstractDocbkxMojo extends AbstractMojo {
     /**
      * Favicon link element for the release version of the HTML.
      */
-    @Parameter(defaultValue = "<link rel=\"shortcut icon\" href=\"http://forgerock.org/favicon.ico\">")
+    @Parameter(defaultValue = "<link rel=\"shortcut icon\" href=\"https://wrensecurity.org/favicon.ico\">")
     private String releaseFaviconLink;
 
     /**
