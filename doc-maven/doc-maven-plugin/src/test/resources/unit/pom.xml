@@ -28,7 +28,7 @@
  <build>
   <plugins>
    <plugin>
-    <artifactId>forgerock-doc-maven-plugin</artifactId>
+    <artifactId>doc-maven-plugin</artifactId>
 
     <configuration>
      <projectName>Test</projectName>
