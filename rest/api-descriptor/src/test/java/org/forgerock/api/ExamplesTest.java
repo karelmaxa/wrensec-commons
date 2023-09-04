@@ -12,7 +12,7 @@
  * information: "Portions copyright [year] [name of copyright owner]".
  *
  * Copyright 2016 ForgeRock AS.
- * Portions Copyright 2018 Wren Security.
+ * Portions Copyright 2018-2023 Wren Security.
  */
 
 package org.forgerock.api;
@@ -28,8 +28,6 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.fasterxml.jackson.core.JsonGenerator;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.module.jsonSchema.JsonSchema;
 import org.forgerock.api.models.ApiDescription;
 import org.forgerock.api.jackson.JacksonUtils;
@@ -40,12 +38,6 @@ public class ExamplesTest {
 
     @BeforeClass
     public void setup() throws Exception {
-        // Unfortunately this currently produces a trivial schema that just has {@code "type": "any"}
-        // for the {@code Errors}, {@code Definitions} and {@code Paths} classes.
-        //
-        // Raised with the jackson project:
-        // - https://github.com/FasterXML/jackson-module-jsonSchema/pull/100
-        // - https://github.com/FasterXML/jackson-databind/pull/1177
         schema = schemaFor(ApiDescription.class);
     }
 
