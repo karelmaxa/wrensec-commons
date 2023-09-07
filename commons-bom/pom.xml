@@ -47,7 +47,7 @@
         <servlet-api.version>3.1.0</servlet-api.version>
         <slf4j.version>1.7.30</slf4j.version>
         <testng.version>7.8.0</testng.version>
-        <swagger.version>1.6.2</swagger.version>
+        <swagger.version>1.6.11</swagger.version>
         <jsr305.version>3.0.2</jsr305.version>
     </properties>
 
@@ -96,11 +96,11 @@
                 <version>${slf4j.version}</version>
             </dependency>
 
-            <!-- Override version managed by testng to version required by swagger -->
+            <!-- Upgrade version managed by swagger -->
             <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
-                <version>27.0.1-android</version>
+                <version>32.1.2-android</version>
                 <exclusions>
                     <exclusion>
                         <groupId>com.google.code.findbugs</groupId>
@@ -120,11 +120,7 @@
                     </exclusion>
                     <exclusion>
                         <groupId>org.checkerframework</groupId>
-                        <artifactId>checker-compat-qual</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.codehaus.mojo</groupId>
-                        <artifactId>animal-sniffer-annotations</artifactId>
+                        <artifactId>checker-qual</artifactId>
                     </exclusion>
                 </exclusions>
             </dependency>
