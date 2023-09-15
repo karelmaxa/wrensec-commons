@@ -75,6 +75,16 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--
+            This is actually transitive dependency of opendj-ldap-toolkit, but
+            Maven is not able to resolve it on its to place it in the reactor.
+        -->
+        <dependency>
+            <groupId>org.wrensecurity.commons</groupId>
+            <artifactId>i18n-core</artifactId>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <build>
