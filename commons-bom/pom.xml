@@ -36,6 +36,13 @@
     </description>
     <url>https://wrensecurity.org</url>
 
+    <distributionManagement>
+        <site>
+            <id>local</id>
+            <url>file:${maven.multiModuleProjectDirectory}/target/deploy/commons-bom</url>
+        </site>
+    </distributionManagement>
+
     <properties>
         <jodaTime.version>2.10.9</jodaTime.version>
         <assertj.version>3.19.0</assertj.version>
@@ -673,8 +680,4 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-  <scm>
-    <tag>22.6.0</tag>
-  </scm>
 </project>
