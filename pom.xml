@@ -90,6 +90,7 @@
     <properties>
         <pgpVerifyKeysVersion>1.7.6</pgpVerifyKeysVersion>
         <wrenBuildToolsVersion>1.2.0</wrenBuildToolsVersion>
+        <pmdPluginVersion>3.21.2</pmdPluginVersion>
     </properties>
 
     <dependencyManagement>
@@ -142,4 +143,25 @@
             </plugins>
         </pluginManagement>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>${pmdPluginVersion}</version>
+
+                <reportSets>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <inherited>false</inherited>
+                        <reports>
+                            <!-- execute within the same session to correctly resolve local plugin deps -->
+                            <report>aggregate-pmd-no-fork</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+        </plugins>
+    </reporting>
 </project>
