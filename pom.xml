@@ -54,7 +54,7 @@
         <url>https://github.com/WrenSecurity/wrensec-commons</url>
         <connection>scm:git:git://github.com/WrenSecurity/wrensec-commons.git</connection>
         <developerConnection>scm:git:git@github.com:WrenSecurity/wrensec-commons.git</developerConnection>
-        <tag>22.6.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <repositories>
@@ -89,7 +89,7 @@
 
     <properties>
         <pgpVerifyKeysVersion>1.7.6</pgpVerifyKeysVersion>
-        <javax.servlet-api.version>3.1.0</javax.servlet-api.version>
+        <wrenBuildToolsVersion>1.2.0</wrenBuildToolsVersion>
     </properties>
 
     <dependencyManagement>
@@ -103,6 +103,13 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <distributionManagement>
+        <site>
+            <id>local</id>
+            <url>file:${maven.multiModuleProjectDirectory}/target/deploy/</url>
+        </site>
+    </distributionManagement>
 
     <modules>
         <module>commons-bom</module>
@@ -134,16 +141,5 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-
-                <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 </project>
