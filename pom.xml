@@ -91,6 +91,7 @@
         <pgpVerifyKeysVersion>1.7.6</pgpVerifyKeysVersion>
         <wrenBuildToolsVersion>1.2.0</wrenBuildToolsVersion>
         <pmdPluginVersion>3.21.2</pmdPluginVersion>
+        <jxrPluginVersion>3.3.2</jxrPluginVersion>
     </properties>
 
     <dependencyManagement>
@@ -148,6 +149,43 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+                <version>${checkstylePluginVersion}</version>
+
+                <configuration>
+                    <failsOnError>false</failsOnError>
+                </configuration>
+
+                <reportSets>
+                    <reportSet>
+                        <id>aggregate</id>
+                        <inherited>false</inherited>
+
+                        <reports>
+                            <report>checkstyle-aggregate</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>${jxrPluginVersion}</version>
+
+                <reportSets>
+                    <reportSet>
+                        <id>default</id>
+
+                        <reports>
+                            <report>jxr-no-fork</report>
+                        </reports>
+                    </reportSet>
+                </reportSets>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-pmd-plugin</artifactId>
                 <version>${pmdPluginVersion}</version>
 
@@ -155,6 +193,7 @@
                     <reportSet>
                         <id>aggregate</id>
                         <inherited>false</inherited>
+
                         <reports>
                             <!-- execute within the same session to correctly resolve local plugin deps -->
                             <report>aggregate-pmd-no-fork</report>

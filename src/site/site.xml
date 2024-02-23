@@ -36,6 +36,10 @@
     <version position="right" />
 
     <body>
+        <head>
+            <![CDATA[<link rel="icon" href="/wrensec-commons/favicon.ico" />]]>
+        </head>
+
         <breadcrumbs>
             <item name="Wren Security" href="https://wrensecurity.org" />
             <item name="Commons" href="index.html" />
