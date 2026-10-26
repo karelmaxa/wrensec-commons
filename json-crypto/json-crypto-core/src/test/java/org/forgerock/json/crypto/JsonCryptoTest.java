@@ -12,7 +12,7 @@
  * information: "Portions Copyrighted [year] [name of copyright owner]".
  *
  * Copyright 2011-2016 ForgeRock AS.
- * Portions Copyrighted 2025 Wren Security
+ * Portions Copyrighted 2025-2026 Wren Security
  */
 
 package org.forgerock.json.crypto;
@@ -184,6 +184,22 @@ public class JsonCryptoTest {
         byte[] iv = Base64.decode(value.get("iv").asString());
         iv[0] ^= 0x01;
         value.put("iv", Base64.encode(iv));
+        new SimpleDecryptor(selector).decrypt(value);
+    }
+
+    @Test(expectedExceptions = JsonCryptoException.class)
+    public void testDroppedSaltIsRejected() throws JsonCryptoException {
+        JsonValue value = new JsonValue(PLAINTEXT);
+        value = new SimpleEncryptor(SYMMETRIC_CIPHER, secretKey, "secretKey").encrypt(value);
+        value.remove("salt");
+        new SimpleDecryptor(selector).decrypt(value);
+    }
+
+    @Test(expectedExceptions = JsonCryptoException.class)
+    public void testDroppedMacIsRejected() throws JsonCryptoException {
+        JsonValue value = new JsonValue(PLAINTEXT);
+        value = new SimpleEncryptor(SYMMETRIC_CIPHER, secretKey, "secretKey").encrypt(value);
+        value.remove("mac");
         new SimpleDecryptor(selector).decrypt(value);
     }
 }
