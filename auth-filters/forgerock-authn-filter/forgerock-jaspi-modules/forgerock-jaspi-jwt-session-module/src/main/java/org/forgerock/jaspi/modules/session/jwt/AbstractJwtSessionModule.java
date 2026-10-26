@@ -540,7 +540,7 @@ abstract class AbstractJwtSessionModule<C> {
         return jwtBuilderFactory
                 .jwe(publicKey)
                 .headers()
-                .alg(JweAlgorithm.RSAES_PKCS1_V1_5)
+                .alg(JweAlgorithm.RSA_OAEP_256)
                 .enc(EncryptionMethod.A128CBC_HS256)
                 .done()
                 .claims(claimsSet)

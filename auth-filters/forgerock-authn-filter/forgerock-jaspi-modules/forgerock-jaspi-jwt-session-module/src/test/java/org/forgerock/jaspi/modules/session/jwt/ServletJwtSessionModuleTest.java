@@ -772,7 +772,7 @@ public class ServletJwtSessionModuleTest {
 
         //Then
         assertEquals(authStatus, AuthStatus.SEND_SUCCESS);
-        verify(jweHeaderBuilder).alg(JweAlgorithm.RSAES_PKCS1_V1_5);
+        verify(jweHeaderBuilder).alg(JweAlgorithm.RSA_OAEP_256);
         verify(jweHeaderBuilder).enc(EncryptionMethod.A128CBC_HS256);
 
         ArgumentCaptor<Date> expCaptor = ArgumentCaptor.forClass(Date.class);
@@ -861,7 +861,7 @@ public class ServletJwtSessionModuleTest {
 
         //Then
         assertEquals(authStatus, AuthStatus.SEND_SUCCESS);
-        verify(jweHeaderBuilder).alg(JweAlgorithm.RSAES_PKCS1_V1_5);
+        verify(jweHeaderBuilder).alg(JweAlgorithm.RSA_OAEP_256);
         verify(jweHeaderBuilder).enc(EncryptionMethod.A128CBC_HS256);
 
         ArgumentCaptor<Date> expCaptor = ArgumentCaptor.forClass(Date.class);
@@ -989,7 +989,7 @@ public class ServletJwtSessionModuleTest {
 
         //Then
         assertEquals(authStatus, AuthStatus.SEND_SUCCESS);
-        verify(jweHeaderBuilder).alg(JweAlgorithm.RSAES_PKCS1_V1_5);
+        verify(jweHeaderBuilder).alg(JweAlgorithm.RSA_OAEP_256);
         verify(jweHeaderBuilder).enc(EncryptionMethod.A128CBC_HS256);
 
         ArgumentCaptor<Date> expCaptor = ArgumentCaptor.forClass(Date.class);
@@ -1078,7 +1078,7 @@ public class ServletJwtSessionModuleTest {
 
         //Then
         assertEquals(authStatus, AuthStatus.SEND_SUCCESS);
-        verify(jweHeaderBuilder).alg(JweAlgorithm.RSAES_PKCS1_V1_5);
+        verify(jweHeaderBuilder).alg(JweAlgorithm.RSA_OAEP_256);
         verify(jweHeaderBuilder).enc(EncryptionMethod.A128CBC_HS256);
 
         ArgumentCaptor<Date> expCaptor = ArgumentCaptor.forClass(Date.class);
